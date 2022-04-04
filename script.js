@@ -34,12 +34,12 @@ function changeBtn(currentBtn){
 }
 
 function player1Wins() {
-  alert("Player 1 WINS!!!");
+  alert("X WINS!!!");
   resetGame();
 }
 
 function player2Wins(){
-  alert("Player 2 WINS")
+  alert("O WINS")
   resetGame();
 }
 
