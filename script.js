@@ -18,14 +18,17 @@ for (var i = 0; i < buttons.length; i++) {
 
 function changeBtn(currentBtn){
   currentBtn = (event.target)
+    if ((currentBtn.value == "X") || (currentBtn.value == "O")){
+      alert("Button already chosen. Please choose a different one")
+    } else 
   if ((playCount == 0) || (playCount == 2) || (playCount == 4) || (playCount == 6) || (playCount == 8)) {
-    currentBtn.value = "X"
+    currentBtn.value = "X";
+    playCount++;
   } else {
     currentBtn.value = "O";
+    playCount++;
   }
-  playCount++;
-  gamePlay();
-  
+  gamePlay(); 
 }
 
 function player1Wins() {
