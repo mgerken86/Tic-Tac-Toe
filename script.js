@@ -1,4 +1,5 @@
 let playCount = 0;
+showTurn();
 
 const one = document.getElementById('one');
 const two = document.getElementById('two');
@@ -19,7 +20,7 @@ for (var i = 0; i < buttons.length; i++) {
 function changeBtn(currentBtn){
   currentBtn = (event.target)
     if ((currentBtn.value == "X") || (currentBtn.value == "O")){
-      alert("Button already chosen. Please choose a different one")
+      currentBtn.value == null;
     } else 
   if ((playCount == 0) || (playCount == 2) || (playCount == 4) || (playCount == 6) || (playCount == 8)) {
     currentBtn.value = "X";
@@ -28,7 +29,8 @@ function changeBtn(currentBtn){
     currentBtn.value = "O";
     playCount++;
   }
-  gamePlay(); 
+  gamePlay();
+  showTurn();
 }
 
 function player1Wins() {
@@ -74,3 +76,8 @@ function gamePlay(){
   }
 }
  
+function showTurn(){ 
+  if ((playCount == 0) || (playCount == 2) || (playCount == 4) || (playCount == 6) || (playCount == 8)){
+    document.getElementById('playerTurn').innerText =  ("It is X's turn");
+  } else document.getElementById('playerTurn').innerText = ("It is O's turn");
+}
