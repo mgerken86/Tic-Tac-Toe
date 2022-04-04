@@ -1,0 +1,30 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1559644705-9d56b56e1380?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1034&q=80");
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-areas: "1 2 3"
+                         "4 5 6" 
+                         "7 8 9";
+  }
+  
+  input {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    font-size: 120px;
+    background-color: ;
+  }
